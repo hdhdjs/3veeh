@@ -1,6 +1,5 @@
 
 const Discord = require("discord.js");
-const PREFIX = "M"
 const ytdl = require("ytdl-core");
 const { Client, Util } = require('discord.js');
 const getYoutubeID = require('get-youtube-id');
@@ -20,61 +19,16 @@ npm install simple-youtube-api
 npm install queue
 */
 
-client.on('message', message => {
-  if (!message.content.startsWith(PREFIX)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== "473980734109909007") return;
-
-  
-  if (message.content.startsWith(PREFIX + 'setwatch')) {
-  client.user.setActivity(argresult, {type: 'WATCHING'})
-     console.log('test' + argresult);
-    message.channel.sendMessage(`Watch Now: **${argresult}`)
-} 
-
- 
-  if (message.content.startsWith(PREFIX + 'setlis')) {
-  client.user.setActivity(argresult, {type: 'LISTENING'})
-     console.log('test' + argresult);
-    message.channel.sendMessage(`LISTENING Now: **${argresult}`)
-} 
-
-
-if (message.content.startsWith(PREFIX + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`Username Changed To **${argresult}**`)
-  return message.reply("You Can change the username 2 times per hour");
-} 
-
-if (message.content.startsWith(PREFIX + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
-}
-
-if (message.content.startsWith(PREFIX + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/KiNg66S");
-     console.log('test' + argresult);
-    message.channel.sendMessage(`Streaming: **${argresult}`)
-} 
-if (message.content.startsWith(PREFIX + 'setplay')) {
-  client.user.setGame(argresult);
-     console.log('test' + argresult);
-    message.channel.sendMessage(`Playing: **${argresult}`)
-} 
-
-
-
-});
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[Codes] ${client.users.size}`)
+	  client.user.setActivity(".Anime Time ", {type: 'WATCHING'})
+
     client.user.setStatus("idle")
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "M"
+const prefix = "1"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -125,7 +79,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-					.setFooter("3veh")
+					.setFooter("KiNg66S")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -267,7 +221,7 @@ function play(guild, song) {
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
 const adminprefix = "$vip";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const devs = ['473980734109909007'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+const devs = ['474520407450320899'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
