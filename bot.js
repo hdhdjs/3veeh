@@ -366,8 +366,8 @@ if (message.content.startsWith(adminprefix + 'setT')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 
-});
     client.user.setStatus("idle")
+
 });
 
 client.login(process.env.BOT_TOKEN);
