@@ -367,5 +367,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }
 
 });
+    client.user.setStatus("idle")
+});
 
 client.login(process.env.BOT_TOKEN);
